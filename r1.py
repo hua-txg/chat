@@ -19,8 +19,16 @@ def convert(lines):
 			continue
 		if person:
 			new.append(person + ': ' + line)
-	print(new) 
+	return new 
 
-lines = read_file('input.txt')
-lines = convert(lines)
+def write_file(filename, lines):
+	with open(filename, 'w') as f:
+		for line in lines:
+			f.write(line + '\n')
 
+def main():
+	lines = read_file('input.txt')
+	lines = convert(lines)
+	write_file('output.txt', lines)
+
+main()
