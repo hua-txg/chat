@@ -11,7 +11,8 @@ def convert(lines):
 	new = []
 	person = None
 	for line in lines:
-		print(line)
+		s = line.split(' ')
+		print(s)
 		
 	return new 
 
