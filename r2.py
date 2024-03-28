@@ -23,6 +23,7 @@ def convert(lines):
 				viki_word_conut += len(m)
 	print('allen說了', allen_word_conut)
 	print('viki說了', viki_word_conut)
+
 def write_file(filename, lines):
 	with open(filename, 'w') as f:
 		for line in lines:
