@@ -22,15 +22,18 @@ for d in data:
 for word in wc:
 	if wc[word] > 1000000:
 		print(word, wc[word])  #印出字及出現的次數
-		# print(wc['Allen'])
-
+		
 	# print(wc)
 while True:
-	word = input('請問你想查什麼字')
+	word = input('請問你想查什麼字：')
 	if word == 'q':
 		break
-	print(word, '出現過的次數為：', wc[word])
-print('感謝使用')
+	if word in wc:
+		print(word, '出現過的次數為：', wc[word])
+	else:
+		print('這個字沒有出現過喔!')  #避開查無此字而造成當機的問題
+
+	print('感謝使用')
 
 
 
