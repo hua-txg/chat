@@ -8,7 +8,6 @@ def read_file(filename):
 	return lines 
 
 def convert(lines):
-	new = []
 	person = None
 	allen_word_conut = 0
 	viki_word_conut = 0
@@ -17,14 +16,13 @@ def convert(lines):
 		time = s[0]
 		name = s[1]
 		if name == 'Allen':
-			print(s[2:])
+			for m in s[2:]:
+				allen_word_conut += len(m)
 		elif name == 'Viki':
-			print(s[2:]) 
-
-		# print(s)
-		
-	return new 
-
+			for m in s[2:]:
+				viki_word_conut += len(m)
+	print('allen說了', allen_word_conut)
+	print('viki說了', viki_word_conut)
 def write_file(filename, lines):
 	with open(filename, 'w') as f:
 		for line in lines:
