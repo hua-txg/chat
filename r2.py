@@ -10,9 +10,18 @@ def read_file(filename):
 def convert(lines):
 	new = []
 	person = None
+	allen_word_conut = 0
+	viki_word_conut = 0
 	for line in lines:
 		s = line.split(' ')
-		print(s)
+		time = s[0]
+		name = s[1]
+		if name == 'Allen':
+			print(s[2:])
+		elif name == 'Viki':
+			print(s[2:]) 
+
+		# print(s)
 		
 	return new 
 
