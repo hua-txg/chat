@@ -19,11 +19,18 @@ for d in data:
 		else:
 			wc[word] = 1  #word不在字典裏，新增新的key寫入字典 { word:1 }
 
+for word in wc:
+	if wc[word] > 1000000:
+		print(word, wc[word])  #印出字及出現的次數
+		# print(wc['Allen'])
 
-
-
-	print(wc)
-	
+	# print(wc)
+while True:
+	word = input('請問你想查什麼字')
+	if word == 'q':
+		break
+	print(word, '出現過的次數為：', wc[word])
+print('感謝使用')
 
 
 
