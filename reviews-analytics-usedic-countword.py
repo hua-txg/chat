@@ -12,7 +12,7 @@ print('檔案讀取完了，總共有', len(data), '筆資料')
 
 wc = {}  #word_conut
 for d in data:
-	words = d.split(' ')  #將d用空格切割存到words
+	words = d.split()  #將d用空格切割存到words
 	for word in words:
 		if word in wc:
 			wc[word] +=1  #word在字典裏，將key  word的值+1
