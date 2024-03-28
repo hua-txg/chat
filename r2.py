@@ -9,20 +9,27 @@ def read_file(filename):
 
 def convert(lines):
 	person = None
-	allen_word_conut = 0
-	viki_word_conut = 0
+	allen_word_count = 0
+	allen_sticker_count = 0
+	viki_word_count = 0
+	viki_sticker_count = 0
 	for line in lines:
 		s = line.split(' ')
 		time = s[0]
 		name = s[1]
 		if name == 'Allen':
-			for m in s[2:]:
-				allen_word_conut += len(m)
+			if s[2] == '貼圖':
+				allen_sticker_count += 1
+			else:
+				for m in s[2:]:
+					allen_word_count += len(m)
 		elif name == 'Viki':
+			if s[2] == '貼圖':
+				viki_sticker_count += 1
 			for m in s[2:]:
-				viki_word_conut += len(m)
-	print('allen說了', allen_word_conut)
-	print('viki說了', viki_word_conut)
+				viki_word_count += len(m)
+	print('allen說了', allen_word_count, '傳了', allen_sticker_count)
+	print('viki說了', viki_word_count, '傳了', viki_sticker_count)
 
 def write_file(filename, lines):
 	with open(filename, 'w') as f:
