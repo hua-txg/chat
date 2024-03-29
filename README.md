@@ -4,3 +4,4 @@
 ## reviews-analytics-usedic-countword.py 利用字典來查詢某個字在留言裏出現幾次，及使讓使用者輸入想查詢的字在留言裏出現幾次
 ## reviews-import-time.py   progressbar 
 ## excel.py   Python 操作 Excel使用openpyxl套件
+## word.py    Python 操作 word 使用docx套件
