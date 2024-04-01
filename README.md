@@ -8,3 +8,4 @@
 ## pyplot.py  python 操作畫圖
 ## pyplot1.py 預設值藍色直線，紅點
 ## pyplot2.py Axes labels and text
+## ./img/image.py 與程式同資料夾  IL  convert image to black and white   
