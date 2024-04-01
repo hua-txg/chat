@@ -6,3 +6,4 @@
 ## excel.py   Python 操作 Excel使用openpyxl套件
 ## word.py    Python 操作 word 使用docx套件
 ## pyplot.py  python 操作畫圖
+## pyplot1.py 預設值藍色直線，紅點
